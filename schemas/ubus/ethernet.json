@@ -1,0 +1,289 @@
+{
+    "definitions": {
+        "iface_t": {
+            "title": "Interface",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 16
+        }
+    },
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://example.com/root.json",
+    "type": "object",
+    "title": "ethernet",
+    "object": "ethernet",
+	"properties": {
+	"ifstats": {
+	    "type": "object",
+	    "properties": {
+		"input": {
+		    "type": "object",
+		    "required": [
+			"ifname"
+		    ],
+		    "properties": {
+		    	"ifname": {
+			    "$ref": "#/definitions/iface_t"
+			}
+		    }
+		},
+		"output": {
+		    "type": "object",
+                    "required": [
+		        "ifname",
+		        "tx_bytes",
+		        "tx_packets",
+		        "tx_errors",
+		        "tx_unicast_packets",
+		        "tx_multicast_packets",
+		        "tx_broadcast_packets",
+		        "tx_discard_packets",
+		        "rx_bytes",
+		        "rx_packets",
+		        "rx_errors",
+		        "rx_unicast_packets",
+		        "rx_multicast_packets",
+		        "rx_broadcast_packets",
+		        "rx_discard_packets",
+		        "rx_unknown_packets"
+                    ],
+		    "properties": {
+                        "ifname": {
+                            "$ref": "#/definitions/iface_t"
+                        },
+                        "tx_bytes": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "tx_packets": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "tx_errors": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "tx_unicast_packets": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "tx_multicast_packets": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "tx_broadcast_packets": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "tx_discard_packets": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "rx_bytes": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "rx_packets": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "rx_errors": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "rx_unicast_packets": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "rx_multicast_packets": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "rx_broadcast_packets": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "rx_discard_packets": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "rx_unknown_packets": {
+                            "type": "integer",
+                            "minimum": 0
+                        }
+		    }
+		}
+	    }
+	},
+        "rmonstats": {
+            "type": "object",
+            "properties": {
+                "input": {
+                    "type": "object",
+                    "required": [
+                        "ifname"
+                    ],
+                    "properties": {
+                        "ifname": {
+                            "$ref": "#/definitions/iface_t"
+                        },
+                        "vid": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "qid": {
+                            "type": "integer",
+                            "minimum": 0
+                        }
+                    }
+                },
+                "output": {
+                    "type": "object",
+                    "required": [
+		        "ifname",
+		        "tx_priority_q",
+		        "tx_bytes",
+		        "tx_packets",
+		        "tx_broadcast_packets",
+		        "tx_multicast_packets",
+		        "tx_crc_error_packets",
+		        "tx_undersize_packets",
+		        "tx_oversize_packets",
+		        "tx_packets_64bytes",
+		        "tx_packets_65to127bytes",
+		        "tx_packets_128to255bytes",
+		        "tx_packets_256to511bytes",
+		        "tx_packets_512to1023bytes",
+		        "tx_packets_1024to1518bytes",
+		        "rx_bytes",
+		        "rx_packets",
+		        "rx_broadcast_packets",
+		        "rx_multicast_packets",
+		        "rx_crc_error_packets",
+		        "rx_undersize_packets",
+		        "rx_oversize_packets",
+		        "rx_packets_64bytes",
+		        "rx_packets_65to127bytes",
+		        "rx_packets_128to255bytes",
+		        "rx_packets_256to511bytes",
+		        "rx_packets_512to1023bytes",
+		        "rx_packets_1024to1518bytes"
+                    ],
+                    "properties": {
+                        "ifname": {
+                            "$ref": "#/definitions/iface_t"
+                        },
+                        "tx_priority_q": {
+                            "type": "integer",
+                            "minimum": -1
+                        },
+                        "tx_bytes": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "tx_packets": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "tx_broadcast_packets": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "tx_multicast_packets": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "tx_crc_error_packets": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "tx_undersize_packets": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "tx_oversize_packets": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "tx_packets_64bytes": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "tx_packets_65to127bytes": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "tx_packets_128to255bytes": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "tx_packets_256to511bytes": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "tx_packets_512to1023bytes": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "tx_packets_1024to1518bytes": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "rx_bytes": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "rx_packets": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "rx_broadcast_packets": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "rx_multicast_packets": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "rx_crc_error_packets": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "rx_undersize_packets": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "rx_oversize_packets": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "rx_packets_64bytes": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "rx_packets_65to127bytes": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "rx_packets_128to255bytes": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "rx_packets_256to511bytes": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "rx_packets_512to1023bytes": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "rx_packets_1024to1518bytes": {
+                            "type": "integer",
+                            "minimum": 0
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

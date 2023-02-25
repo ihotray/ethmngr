@@ -1,0 +1,21 @@
+{
+  "object": "ethernet",
+  "methods": [
+    {
+      "method": "ifstats",
+      "args": {
+	      "ifname": "eth0"
+      },
+      "rc": 0
+    },
+    {
+      "method": "rmonstats",
+      "args": {
+	      "ifname": "eth0",
+	      "qid": 0,
+	      "vid": 0
+      },
+      "rc": 0
+    }
+  ]
+}

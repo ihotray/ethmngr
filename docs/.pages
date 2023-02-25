@@ -1,0 +1,8 @@
+title: "Ethernet Manager"
+
+nav:
+    - "index.md"
+    - "functionspec.md"
+    - "testspec.md"
+    - "api"
+    - "..."
